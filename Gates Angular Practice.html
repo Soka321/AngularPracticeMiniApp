@@ -1,0 +1,80 @@
+<!DocType html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+<center>
+<h2>Register Here</h2>
+</center>
+<div class="container-fluid" ng-app="MyAPP" style="background-color:darkcyan">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" >
+                <div class=" card-body" >
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label style="background-color:azure">name:</label>
+                                
+                                <center>
+                                    <input type="text" placeholder="Enter name" ng-model="Name" class="form-control" asp-for="Name" asp-controller="User" asp-action="Register" />
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label style="background-color:azure">Email:</label>
+                                
+
+                                <center>
+                                    <input type="text" placeholder="Enter email" ng-model="Email" class="form-control" asp-for="Email" asp-controller="User" asp-action="Register" />
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label style="background-color:azure">Role:</label>
+                                
+                                <center>
+                                    <input type="text" placeholder="Enter Role" class="form-control" ng-model="Role" asp-for="Role" asp-controller="User" asp-action="Register" />
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br />
+                                <a href="#" class="btn btn-block btn-primary active">Register</a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <h3 style="background-color:azure"> Registered Users:</h3>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Name : @Model.Name</li>
+                                        <li class="list-group-item">Email : @Model.Email</li>
+                                        <li class="list-group-item">Role : @Model.Role</li>
+
+                                        <li class="list-group-item">Name : {{Name}}</li>
+                                        <li class="list-group-item">Email : {{Email}}</li>
+                                        <li class="list-group-item">Role : {{Role}}</li>
+                                    </ul>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+        </div></div>
+            </div>
+    </div>
+</div>
+<script>
+    var app = angular.module("MyAPP", []);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+</body>
+
+</html>
